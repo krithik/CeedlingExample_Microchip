@@ -1,5 +1,5 @@
 #include "gpio_access.h"
-#include "p24hj128GP202.h"
+#include "p24HJ128GP202.h"
 #include <assert.h>
 
 void GPIO_SetBit(GPIO_PORTS port, PORT_BITS bit)
