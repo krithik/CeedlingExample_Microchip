@@ -14,7 +14,7 @@ class Configurator
     @project_logging   = false
     @project_debug     = false
     @project_verbosity = Verbosity::NORMAL
-    @sanity_checks     = TestResultsSanityChecks::NORMAL
+    @sanity_checks     = TestResultsSanityChecks::NONE
   end
   
   def setup
