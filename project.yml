@@ -31,7 +31,7 @@
   :support:
     - test/support
   :include:
-    - "C:/Program Files (x86)/Microchip/xc16/v1.10/support/PIC24H/h/"
+    - /opt/microchip/xc16/v1.26/support/PIC24H/h/
 
 :defines:
   # in order to add common defines:
@@ -87,13 +87,13 @@
       - -mcpu=24HJ128GP202
       - ${1}
       - -o "./build/release/TestBuild.out"
-      - -Wl,-Tp24HJ128GP202.gld,-Map=./build/release/TestOutput.map,--report-mem
+      - -Wl,-Tp24HJ128GP202.gld,-Map="./build/release/TestOutput.map",--report-mem
   :test_fixture:
     :executable: ruby
     :name: "Microchip simulator test fixture"
     :stderr_redirect: :win #inform Ceedling what model of $stderr capture to use
     :arguments:
-      - test/simulation/sim_test_fixture.rb
+      - ./test/simulation/sim_test_fixture.rb
 
   :release_compiler:
     :executable: xc16-gcc
